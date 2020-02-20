@@ -1,0 +1,11 @@
+harnessApiVersion: '1.0'
+type: TERRAFORM
+name: aj-excersie-1
+path: exercise_1
+sourceRepoBranch: master
+sourceRepoSettingName: aj-github-terraform
+variables:
+- name: access_key
+  valueType: ENCRYPTED_TEXT
+- name: secret_key
+  valueType: ENCRYPTED_TEXT
