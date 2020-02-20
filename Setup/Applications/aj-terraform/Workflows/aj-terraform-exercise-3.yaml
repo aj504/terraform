@@ -52,6 +52,14 @@ preDeploymentSteps:
     timeoutMillis: 86400000
     userGroups:
     - FbPJlj-8R3eHWlRmJ2bjOw
+- type: TERRAFORM_PROVISION
+  name: Terraform Apply
+  properties:
+    inheritApprovedPlan: true
+    provisionerName: aj-excersie-3
+    runPlanOnly: false
+    tfVarFiles: null
+    timeoutMillis: 300000
 templatized: true
 userVariables:
 - type: TEXT
