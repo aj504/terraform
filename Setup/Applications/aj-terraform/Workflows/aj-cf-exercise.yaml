@@ -16,4 +16,16 @@ notificationRules:
   userGroupAsExpression: false
   userGroupIds:
   - FbPJlj-8R3eHWlRmJ2bjOw
+preDeploymentSteps:
+- type: CLOUD_FORMATION_CREATE_STACK
+  name: CloudFormation Create Stack
+  properties:
+    awsConfigId: SKikqzi6QCCFaD8vfNOHYw
+    backendConfigs: null
+    customStackName: aj-cf-stack-ex1
+    provisionerName: aj-cf-exercise
+    region: us-east-1
+    timeoutMillis: 300000
+    useCustomStackName: true
+    variables: null
 templatized: false
