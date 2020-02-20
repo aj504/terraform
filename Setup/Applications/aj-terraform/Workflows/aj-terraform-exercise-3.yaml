@@ -17,4 +17,9 @@ notificationRules:
   userGroupAsExpression: false
   userGroupIds:
   - FbPJlj-8R3eHWlRmJ2bjOw
-templatized: false
+templatized: true
+userVariables:
+- type: TEXT
+  fixed: false
+  mandatory: true
+  name: s3_bucket_name
