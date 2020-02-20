@@ -58,6 +58,9 @@ preDeploymentSteps:
     inheritApprovedPlan: true
     provisionerName: aj-excersie-3
     runPlanOnly: false
+    templateUuid: null
+    templateVariables: null
+    templateVersion: null
     tfVarFiles: null
     timeoutMillis: 300000
 templatized: true
