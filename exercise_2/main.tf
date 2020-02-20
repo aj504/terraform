@@ -6,7 +6,7 @@ provider "aws" {
 
 terraform {
    backend "s3" {
-   bucket = "rc-tf-remote-state-bucket"
+   bucket = "aj-tf-bucket-training-exercise-1"
    key = "terraform.tfstate"
    region = "us-east-1"
   }
@@ -16,14 +16,13 @@ resource "aws_s3_bucket" "tf-root-module-bucket" {
   bucket = "${var.s3_bucket_name}"
   acl = "private"
   region = "${var.s3_bucket_region}"
-  
+
   versioning {
     enabled = true
   }
-  
+
   tags = {
     Name        = "${var.s3_bucket_name}"
     Environment = "${var.tag_env}"
   }
 }
-
