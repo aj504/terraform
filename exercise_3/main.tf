@@ -8,6 +8,7 @@ terraform {
    backend "s3" {
    bucket = "aj-tf-bucket-training-exercise-1"
    region = "us-east-1"
+   key = "terraform.tfstate"
   }
 }
 
