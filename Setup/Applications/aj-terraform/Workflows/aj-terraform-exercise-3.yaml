@@ -17,6 +17,34 @@ notificationRules:
   userGroupAsExpression: false
   userGroupIds:
   - FbPJlj-8R3eHWlRmJ2bjOw
+preDeploymentSteps:
+- type: TERRAFORM_PROVISION
+  name: Terraform Plan
+  properties:
+    backendConfigs:
+    - name: secret_key
+      value: lfh1x2LJTF6MaZLo8roWhA
+      valueType: ENCRYPTED_TEXT
+    - name: access_key
+      value: 2ssEiVvxR6S2LA4-iNJ7Zw
+      valueType: ENCRYPTED_TEXT
+    delegateTag: aj-delegate
+    provisionerName: aj-excersie-3
+    runPlanOnly: true
+    tfVarFiles: null
+    variables:
+    - name: secret_key
+      value: lfh1x2LJTF6MaZLo8roWhA
+      valueType: ENCRYPTED_TEXT
+    - name: access_key
+      value: 2ssEiVvxR6S2LA4-iNJ7Zw
+      valueType: ENCRYPTED_TEXT
+    - name: s3_bucket_region
+      value: us-east-1
+      valueType: TEXT
+    - name: s3_bucket_name
+      value: ${workflow.variables.s3_bucket_name}
+      valueType: TEXT
 templatized: true
 userVariables:
 - type: TEXT
