@@ -29,8 +29,13 @@ preDeploymentSteps:
       value: 2ssEiVvxR6S2LA4-iNJ7Zw
       valueType: ENCRYPTED_TEXT
     delegateTag: aj-delegate
+    inheritApprovedPlan: false
     provisionerName: aj-excersie-3
     runPlanOnly: true
+    targets: null
+    templateUuid: null
+    templateVariables: null
+    templateVersion: null
     tfVarFiles: null
     variables:
     - name: secret_key
