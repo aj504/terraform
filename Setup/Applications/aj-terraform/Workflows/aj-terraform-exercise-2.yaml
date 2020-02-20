@@ -16,4 +16,31 @@ notificationRules:
   userGroupAsExpression: false
   userGroupIds:
   - FbPJlj-8R3eHWlRmJ2bjOw
+preDeploymentSteps:
+- type: TERRAFORM_PROVISION
+  name: Terraform Provision
+  properties:
+    backendConfigs:
+    - name: access_key
+      value: 2ssEiVvxR6S2LA4-iNJ7Zw
+      valueType: ENCRYPTED_TEXT
+    - name: secret_key
+      value: lfh1x2LJTF6MaZLo8roWhA
+      valueType: ENCRYPTED_TEXT
+    delegateTag: aj-delegate
+    inheritApprovedPlan: false
+    provisionerName: aj-excersie-2
+    runPlanOnly: false
+    targets: null
+    templateUuid: null
+    templateVariables: null
+    templateVersion: null
+    tfVarFiles: null
+    variables:
+    - name: secret_key
+      value: lfh1x2LJTF6MaZLo8roWhA
+      valueType: ENCRYPTED_TEXT
+    - name: access_key
+      value: 2ssEiVvxR6S2LA4-iNJ7Zw
+      valueType: ENCRYPTED_TEXT
 templatized: false
